@@ -1,0 +1,29 @@
+{
+  "id": "com.dmz.russound",
+  "name": {
+    "en": "CAx6.6"
+  },
+  "description": {
+    "en": "Control compatible Russound CA-series amplifiers using the ASCII RS-232 protocol (via TCP gateway)."
+  },
+  "category": [
+    "music"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "sdk": 3,
+  "version": "1.0.1",
+  "compatibility": ">=7.0.0",
+  "images": {
+    "small": "/assets/logo_small.png",
+    "large": "/assets/logo_large.png"
+  },
+  "brandColor": "#1E88E5",
+  "author": {
+    "name": "Anders",
+    "email": "anders@dmz.no"
+  },
+  "homepage": "https://dmz.no",
+  "support": "mailto:anders@dmz.no"
+}

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "en": "Set zone source",
+    "no": "Sett sonekilde"
+  },
+  "titleFormatted": {
+    "en": "Set source to [[source]]",
+    "no": "Sett kilde til [[source]]"
+  },
+  "hint": {
+    "en": "Selects input source 1 to 6.",
+    "no": "Velger kilde 1 til 6."
+  },
+  "args": [
+    {
+      "name": "source",
+      "type": "number",
+      "title": {
+        "en": "Source (1-6)",
+        "no": "Kilde (1-6)"
+      },
+      "min": 1,
+      "max": 6
+    }
+  ]
+}

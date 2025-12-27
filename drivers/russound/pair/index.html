@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Add Russound</title>
+</head>
+<body>
+  <script>
+    Homey.setTitle('Add Russound CAx6.6');
+    Homey.ready();
+
+    async function addDevices() {
+      const host = document.getElementById('host').value.trim();
+      const port = Number(document.getElementById('port').value);
+
+      if (!host || !port) {
+        return Homey.alert('Please enter gateway IP and port');
+      }
+
+      const baseId = `russound-${Date.now()}`;
+
+      try {
+        // Controller (zone 0)
+        await Homey.createDevice({
+          name: 'Russound Controller',
+          data: { id: `${baseId}-controller`, zone: 0, baseId },
+          settings: { host, port, friendlyName: 'Russound Controller' }
+        });
+
+        // Zones 1..6
+        for (let z = 1; z <= 6; z++) {
+          await Homey.createDevice({
+            name: `Zone ${z}`,
+            data: { id: `${baseId}-zone-${z}`, zone: z, baseId },
+            settings: { host, port, friendlyName: `Zone ${z}` }
+          });
+        }
+
+        Homey.done();
+      } catch (err) {
+        Homey.alert(err.message || 'Failed to add devices');
+      }
+    }
+  </script>
+
+  <div style="padding: 20px;">
+    <p>Enter the RS-232 to TCP gateway address.</p>
+
+    <label>
+      Gateway IP / Host<br />
+      <input id="host" type="text" placeholder="10.0.0.95" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      TCP Port<br />
+      <input id="port" type="number" value="4001" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="addDevices()" style="font-size:16px;">
+      Add controller + zones
+    </button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Source"
+  },
+  "values": [
+    { "id": "1", "title": { "en": "Source 1" } },
+    { "id": "2", "title": { "en": "Source 2" } },
+    { "id": "3", "title": { "en": "Source 3" } },
+    { "id": "4", "title": { "en": "Source 4" } },
+    { "id": "5", "title": { "en": "Source 5" } },
+    { "id": "6", "title": { "en": "Source 6" } }
+  ],
+  "getable": true,
+  "setable": true
+}

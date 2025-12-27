@@ -1,0 +1,11 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Zone off",
+    "no": "Zone off"
+  },
+  "uiComponent": "button",
+  "getable": false,
+  "setable": true,
+  "insights": false
+}

@@ -1,0 +1,11 @@
+{
+  "name": "com.dmz.russound",
+  "version": "1.0.0",
+  "description": "Russound CAx-series controller for Homey",
+  "main": "app.js",
+  "scripts": {
+    "build": "homey app build",
+    "run": "homey app run"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,39 @@
+{
+  "id": "russound",
+  "name": {
+    "en": "Russound CAx6.6"
+  },
+  "class": "speaker",
+  "icon": "/drivers/russound/assets/icon.svg",
+  "images": {
+    "small": "/assets/logo_supersmall.png",
+    "large": "/assets/logo_superlarge.png"
+  },
+  "capabilities": [],
+  "settings": [
+    {
+      "id": "host",
+      "type": "text",
+      "label": {
+        "en": "Gateway IP / Host",
+        "no": "Gateway IP / Vert"
+      },
+      "value": ""
+    },
+    {
+      "id": "port",
+      "type": "number",
+      "label": {
+        "en": "TCP Port",
+        "no": "TCP-port"
+      },
+      "value": 4001
+    }
+  ],
+  "pair": [
+    {
+      "id": "index",
+      "view": "index"
+    }
+  ]
+}

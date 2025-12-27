@@ -1,0 +1,17 @@
+{
+  "title": {
+    "en": "All zones off",
+    "no": "Alle soner av"
+  },
+  "hint": {
+    "en": "Turns off all Russound zones (select the controller device).",
+    "no": "Slår av alle Russound-soner (velg kontroller-enheten)."
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=russound"
+    }
+  ]
+}

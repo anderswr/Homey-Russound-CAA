@@ -1,0 +1,259 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.dmz.russound",
+  "name": {
+    "en": "CAx6.6"
+  },
+  "description": {
+    "en": "Control compatible Russound CA-series amplifiers using the ASCII RS-232 protocol (via TCP gateway)."
+  },
+  "category": [
+    "music"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "sdk": 3,
+  "version": "1.0.1",
+  "compatibility": ">=7.0.0",
+  "images": {
+    "small": "/assets/logo_small.png",
+    "large": "/assets/logo_large.png"
+  },
+  "brandColor": "#1E88E5",
+  "author": {
+    "name": "Anders",
+    "email": "anders@dmz.no"
+  },
+  "homepage": "https://dmz.no",
+  "support": "mailto:anders@dmz.no",
+  "flow": {
+    "actions": [
+      {
+        "title": {
+          "en": "All zones off",
+          "no": "Alle soner av"
+        },
+        "hint": {
+          "en": "Turns off all Russound zones (select the controller device).",
+          "no": "Slår av alle Russound-soner (velg kontroller-enheten)."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=russound"
+          }
+        ],
+        "id": "all_zones_off"
+      },
+      {
+        "title": {
+          "en": "Set zone power",
+          "no": "Sett sone på/av"
+        },
+        "titleFormatted": {
+          "en": "Set power to [[state]]",
+          "no": "Sett strøm til [[state]]"
+        },
+        "hint": {
+          "en": "Turns a Russound zone on or off.",
+          "no": "Slår en Russound-sone av/på."
+        },
+        "args": [
+          {
+            "name": "state",
+            "type": "dropdown",
+            "title": {
+              "en": "State",
+              "no": "Tilstand"
+            },
+            "values": [
+              {
+                "id": "on",
+                "title": {
+                  "en": "On",
+                  "no": "På"
+                }
+              },
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "no": "Av"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set_zone_power"
+      },
+      {
+        "title": {
+          "en": "Set zone source",
+          "no": "Sett sonekilde"
+        },
+        "titleFormatted": {
+          "en": "Set source to [[source]]",
+          "no": "Sett kilde til [[source]]"
+        },
+        "hint": {
+          "en": "Selects input source 1 to 6.",
+          "no": "Velger kilde 1 til 6."
+        },
+        "args": [
+          {
+            "name": "source",
+            "type": "number",
+            "title": {
+              "en": "Source (1-6)",
+              "no": "Kilde (1-6)"
+            },
+            "min": 1,
+            "max": 6
+          }
+        ],
+        "id": "set_zone_source"
+      },
+      {
+        "title": {
+          "en": "Set zone volume",
+          "no": "Sett sonevolum"
+        },
+        "titleFormatted": {
+          "en": "Set volume to [[volume]]",
+          "no": "Sett volum til [[volume]]"
+        },
+        "hint": {
+          "en": "Sets zone volume from 0 to 100.",
+          "no": "Setter sonevolum fra 0 til 100."
+        },
+        "args": [
+          {
+            "name": "volume",
+            "type": "range",
+            "title": {
+              "en": "Volume",
+              "no": "Volum"
+            },
+            "min": 0,
+            "max": 100,
+            "step": 1
+          }
+        ],
+        "id": "set_zone_volume"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "russound",
+      "name": {
+        "en": "Russound CAx6.6"
+      },
+      "class": "speaker",
+      "icon": "/drivers/russound/assets/icon.svg",
+      "images": {
+        "small": "/assets/logo_supersmall.png",
+        "large": "/assets/logo_superlarge.png"
+      },
+      "capabilities": [],
+      "settings": [
+        {
+          "id": "host",
+          "type": "text",
+          "label": {
+            "en": "Gateway IP / Host",
+            "no": "Gateway IP / Vert"
+          },
+          "value": ""
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "TCP Port",
+            "no": "TCP-port"
+          },
+          "value": 4001
+        }
+      ],
+      "pair": [
+        {
+          "id": "index",
+          "view": "index"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "all_off": {
+      "type": "boolean",
+      "title": {
+        "en": "All zones off",
+        "no": "All zones off"
+      },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true,
+      "insights": false
+    },
+    "source": {
+      "type": "enum",
+      "title": {
+        "en": "Source"
+      },
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "Source 1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Source 2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Source 3"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Source 4"
+          }
+        },
+        {
+          "id": "5",
+          "title": {
+            "en": "Source 5"
+          }
+        },
+        {
+          "id": "6",
+          "title": {
+            "en": "Source 6"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true
+    },
+    "zone_off": {
+      "type": "boolean",
+      "title": {
+        "en": "Zone off",
+        "no": "Zone off"
+      },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true,
+      "insights": false
+    }
+  }
+}

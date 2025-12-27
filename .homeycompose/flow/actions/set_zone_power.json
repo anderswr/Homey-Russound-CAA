@@ -1,0 +1,40 @@
+{
+  "title": {
+    "en": "Set zone power",
+    "no": "Sett sone på/av"
+  },
+  "titleFormatted": {
+    "en": "Set power to [[state]]",
+    "no": "Sett strøm til [[state]]"
+  },
+  "hint": {
+    "en": "Turns a Russound zone on or off.",
+    "no": "Slår en Russound-sone av/på."
+  },
+  "args": [
+    {
+      "name": "state",
+      "type": "dropdown",
+      "title": {
+        "en": "State",
+        "no": "Tilstand"
+      },
+      "values": [
+        {
+          "id": "on",
+          "title": {
+            "en": "On",
+            "no": "På"
+          }
+        },
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "no": "Av"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": {
+    "en": "Set zone volume",
+    "no": "Sett sonevolum"
+  },
+  "titleFormatted": {
+    "en": "Set volume to [[volume]]",
+    "no": "Sett volum til [[volume]]"
+  },
+  "hint": {
+    "en": "Sets zone volume from 0 to 100.",
+    "no": "Setter sonevolum fra 0 til 100."
+  },
+  "args": [
+    {
+      "name": "volume",
+      "type": "range",
+      "title": {
+        "en": "Volume",
+        "no": "Volum"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1
+    }
+  ]
+}
