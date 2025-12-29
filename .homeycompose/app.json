@@ -1,10 +1,10 @@
 {
   "id": "com.dmz.russound",
   "name": {
-    "en": "CAx6.6"
+    "en": "Russound CAx6.6"
   },
   "description": {
-    "en": "Control compatible Russound CA-series amplifiers using the ASCII RS-232 protocol (via TCP gateway)."
+    "en": "Bring Russound multiroom audio into Homey with simple zone control and Flows."
   },
   "category": [
     "music"
@@ -25,5 +25,5 @@
     "email": "anders@dmz.no"
   },
   "homepage": "https://dmz.no",
-  "support": "mailto:anders@dmz.no"
+  "support": "https://github.com/anderswr/Homey-Russound-CAA/issues"
 }

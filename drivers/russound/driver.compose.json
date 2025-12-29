@@ -6,8 +6,8 @@
   "class": "speaker",
   "icon": "/drivers/russound/assets/icon.svg",
   "images": {
-    "small": "/assets/logo_supersmall.png",
-    "large": "/assets/logo_superlarge.png"
+    "small": "/assets/device_small.png",
+    "large": "/assets/device_large.png"
   },
   "capabilities": [],
   "settings": [
